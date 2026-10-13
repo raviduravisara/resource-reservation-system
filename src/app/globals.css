@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme {
+  --color-brand-50: oklch(0.979 0.021 166.113);
+  --color-brand-100: oklch(0.95 0.052 163.051);
+  --color-brand-200: oklch(0.905 0.093 164.15);
+  --color-brand-500: oklch(0.696 0.17 162.48);
+  --color-brand-600: oklch(0.596 0.145 163.225);
+  --color-brand-700: oklch(0.508 0.118 165.612);
+  --color-brand-900: oklch(0.378 0.077 168.94);
+}
+
+@layer base {
+  body {
+    @apply bg-zinc-50 text-zinc-900;
+  }
+
+  ::selection {
+    @apply bg-brand-200;
+  }
+}
+
+.bg-hatched {
+  background-image: repeating-linear-gradient(
+    135deg,
+    rgb(0 0 0 / 0.045) 0,
+    rgb(0 0 0 / 0.045) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+}
